@@ -54,7 +54,8 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: matriz-de-pares-pg_production
+  host: ec2-54-204-47-58.compute-1.amazonaws.com
+  database: demlcrm0jk1tc3
   pool: 5
-  username: matriz-de-pares-pg
-  password:
+  username: woilqkthynkxub
+  password: n6bUCGFL0Ec8115r76Ww9aSdsc
