@@ -19,8 +19,8 @@ development:
   encoding: unicode
   database: matriz-de-pares-pg_development
   pool: 5
-  username: matriz-de-pares-pg
-  password:
+  username: postgres
+  password: pass
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -48,8 +48,8 @@ test:
   encoding: unicode
   database: matriz-de-pares-pg_test
   pool: 5
-  username: matriz-de-pares-pg
-  password:
+  username: postgres
+  password: pass
 
 production:
   adapter: postgresql

@@ -1,4 +1,23 @@
 MatrizDeParesPg::Application.routes.draw do
+
+  #persons
+  # get     'persons'           =>  'persons#show'
+  # get     'persons/new'       =>  'persons#new'
+  # get     'persons/:id/edit'  =>  'persons#edit'
+
+  # put     'persons/:id'       =>  'persons#update'
+  # patch   'persons/:id'       =>  'persons#update'
+
+  # post    'persons'           =>  'persons#create'
+
+  # delete  'persons/:id'       =>  'persons#delete'
+
+  root    'matrix#index'
+  
+  get     'matriz'              => 'matrix#index'
+  post    'matriz/add_pair'     => 'matrix#add_pair'
+  delete  'matriz/remove_pair'  => 'matrix#remove_pair'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
