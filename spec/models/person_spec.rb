@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Person, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+	
+	it "run tests plz" do
+		expect(Person.all.count).to be(10)
+	end
+
 end
