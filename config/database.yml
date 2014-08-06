@@ -51,3 +51,10 @@ test:
   username: postgres
   password: pass
 
+production:
+  adapter: postgresql
+  encoding: unicode
+  host: ec2-54-204-47-58.compute-1.amazonaws.com
+  database: demlcrm0jk1tc3
+  username: woilqkthynkxub
+  password: n6bUCGFL0Ec8115r76Ww9aSdsc
