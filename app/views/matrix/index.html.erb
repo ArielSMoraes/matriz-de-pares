@@ -1,6 +1,28 @@
-<h1>Hello Heroku</h1>
+<div class="matriz">
+	<table>
 
-<% @persons.each do |person| %>
-	<%= person.name %>
+		<tr>
+			<td class="empty-column"></td>
+			<% @matrix.reversed_persons_matrix.each do |person| %>
+				<td class="person-name-top"> <%= person.name %> </td>
+			<% end %>
+		</tr>
 
-<% end %>
+		<% visible = "visible" %>
+		<% @matrix.persons_for_matrix.each do |person|%>
+			<tr>
+				
+				<td class="person-name-left"> <%= person.name %> </td>
+				<% @matrix.reversed_persons_matrix.each do |pair| %>
+					<% if person == pair then visible = "hidden" end%>
+					<td class ="<%= visible %>">
+						<%= person.days_paired_with(pair) %>
+					</td>
+				<% end %>
+
+				<% visible = "visible" %>
+			</tr>
+		<% end %>
+
+	</table>
+</div>

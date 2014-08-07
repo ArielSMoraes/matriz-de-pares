@@ -1,7 +1,7 @@
 class MatrixController < ApplicationController
 
 	def index
-		@persons = Person.all
+		@matrix = Matrix.new
 	end
 
 end
