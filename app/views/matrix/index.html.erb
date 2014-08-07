@@ -16,11 +16,12 @@
 				<% @matrix.reversed_persons_matrix.each do |pair| %>
 					<% if person == pair then visible = "hidden" end%>
 					<td class ="<%= visible %>">
-						<%= button_to "+", {action: "add_pair", controller: "matrix", person: person, pair: pair}, method: :post %>
+
+						<%= button_to "-", {action: "remove_pair", controller: "matrix", person: person, pair: pair}, method: :delete %>
 
 						<%= person.days_paired_with(pair) %>
 						
-						<%= button_to "-", {action: "remove_pair", controller: "matrix", person: person, pair: pair}, method: :delete %>
+						<%= button_to "+", {action: "add_pair", controller: "matrix", person: person, pair: pair}, method: :post %>
 
 					</td>
 				<% end %>
@@ -31,3 +32,26 @@
 
 	</table>
 </div>
+
+<% @matrix.persons.each do |person| %>
+	<div class="person">
+		<h2> <%= person.name %> </h2>
+		<span>Coringa - <%= person.joker %></span>
+
+		<div class="pairs">
+		
+			<% @matrix.persons.each do |who_paired_with_the_pesrson| %>
+				<% unless who_paired_with_the_pesrson == person %>
+					<div class="name-pair">
+						<p> <%= who_paired_with_the_pesrson.name %> </p>
+					  <%= button_to "-", {action: "remove_pair", controller: "matrix", person: person, pair: who_paired_with_the_pesrson}, method: :delete %>
+					  <p> <%= person.days_paired_with(who_paired_with_the_pesrson) %> </p>
+					  <%= button_to "+", {action: "add_pair", controller: "matrix", person: person, pair: who_paired_with_the_pesrson}, method: :post %>
+					</div>
+				<% end %>
+			<% end %>
+		
+		</div>
+
+	</div>
+<% end %>
