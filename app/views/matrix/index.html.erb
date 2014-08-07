@@ -16,7 +16,12 @@
 				<% @matrix.reversed_persons_matrix.each do |pair| %>
 					<% if person == pair then visible = "hidden" end%>
 					<td class ="<%= visible %>">
+						<%= button_to "+", {action: "add_pair", controller: "matrix", person: person, pair: pair}, method: :post %>
+
 						<%= person.days_paired_with(pair) %>
+						
+						<%= button_to "-", {action: "remove_pair", controller: "matrix", person: person, pair: pair}, method: :delete %>
+
 					</td>
 				<% end %>
 

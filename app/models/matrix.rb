@@ -9,6 +9,20 @@ class Matrix < ActiveRecord::Base
 		@persons_for_matrix.pop
 	end
 
+	def paired_today person, pair
+		person_db = Person.find(person)
+		pair_db = Person.find(pair)
+
+		person_db.paired_today_with(pair_db)
+	end
+
+	def remove_pair person, pair
+		person_db = Person.find(person)
+		pair_db = Person.find(pair)
+				
+		person_db.delete_last_day(pair_db)
+	end
+
 	def reversed_persons_matrix
 		@reversed_persons_matrix
 	end
