@@ -8,6 +8,9 @@ gem 'rails', '4.0.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+#for assets
+gem 'rails_12factor', group: :production
+
 #rspec tests
 gem "rspec-rails", :group => [:development, :test]
 
