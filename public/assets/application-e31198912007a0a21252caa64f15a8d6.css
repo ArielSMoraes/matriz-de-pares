@@ -1,0 +1,95 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+/* line 4, /home/ariel/workspace/matriz-de-pares-pg/app/assets/stylesheets/matrix.css.scss */
+form {
+  display: inline-block;
+}
+
+/* line 8, /home/ariel/workspace/matriz-de-pares-pg/app/assets/stylesheets/matrix.css.scss */
+p {
+  display: inline-block;
+  margin-right: 5px;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+
+/* line 15, /home/ariel/workspace/matriz-de-pares-pg/app/assets/stylesheets/matrix.css.scss */
+h1 {
+  text-align: center;
+}
+
+/* line 19, /home/ariel/workspace/matriz-de-pares-pg/app/assets/stylesheets/matrix.css.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0px;
+  width: 100%;
+}
+
+/* line 25, /home/ariel/workspace/matriz-de-pares-pg/app/assets/stylesheets/matrix.css.scss */
+div.name-pair {
+  display: inline-block;
+}
+
+/* line 29, /home/ariel/workspace/matriz-de-pares-pg/app/assets/stylesheets/matrix.css.scss */
+td {
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+  text-align: center;
+  padding-top: 8px;
+  width: 7%;
+}
+
+/* line 38, /home/ariel/workspace/matriz-de-pares-pg/app/assets/stylesheets/matrix.css.scss */
+td.below-average {
+  color: red;
+}
+
+/* line 42, /home/ariel/workspace/matriz-de-pares-pg/app/assets/stylesheets/matrix.css.scss */
+td.above-average {
+  color: red;
+}
+
+/* line 50, /home/ariel/workspace/matriz-de-pares-pg/app/assets/stylesheets/matrix.css.scss */
+td form {
+  visibility: hidden;
+}
+
+/* line 54, /home/ariel/workspace/matriz-de-pares-pg/app/assets/stylesheets/matrix.css.scss */
+td:hover form {
+  visibility: visible;
+}
+
+/* line 58, /home/ariel/workspace/matriz-de-pares-pg/app/assets/stylesheets/matrix.css.scss */
+input[type="submit"] {
+  cursor: pointer;
+}
+
+/* line 62, /home/ariel/workspace/matriz-de-pares-pg/app/assets/stylesheets/matrix.css.scss */
+.empty-column {
+  border: none;
+  display: table-column;
+  visibility: hidden;
+}
+
+/* line 68, /home/ariel/workspace/matriz-de-pares-pg/app/assets/stylesheets/matrix.css.scss */
+.visible {
+  visibility: visible;
+}
+
+/* line 72, /home/ariel/workspace/matriz-de-pares-pg/app/assets/stylesheets/matrix.css.scss */
+.hidden {
+  visibility: hidden;
+}
