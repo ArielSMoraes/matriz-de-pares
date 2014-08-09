@@ -11,11 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140806174504) do
+ActiveRecord::Schema.define(version: 20140809125549) do
 
   create_table "matrices", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "max"
+    t.integer  "min"
   end
 
   create_table "paired_days", force: true do |t|

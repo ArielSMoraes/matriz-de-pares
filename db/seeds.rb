@@ -5,6 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Matrix.create(max: 3, min: 2)
+
 Person.create(name: "Ariel")
 Person.create(name: "Aline")
 

@@ -15,7 +15,7 @@
 				<td class="person-name-left"> <%= person.name %> </td>
 				<% @matrix.reversed_persons_matrix.each do |pair| %>
 					<% if person == pair then visible = "hidden" end%>
-					<td class ="<%= visible %>">
+					<td class ="<%= visible %> <%= @matrix.average(person, pair) %>">
 
 						<%= button_to "-", {action: "remove_pair", controller: "matrix", person: person, pair: pair}, method: :delete %>
 

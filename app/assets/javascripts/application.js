@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(document).ready(function(){
+	$(".person h2").click(function(){
+	    $(this).siblings("div").toggle("slow");
+	});
+});

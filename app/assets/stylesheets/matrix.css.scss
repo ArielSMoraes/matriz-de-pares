@@ -35,16 +35,16 @@ td {
 	width: 7%;
 }
 
-td.below-average {
+td.below {
+	color: cyan;
+}
+
+td.above {
 	color: red;
 }
 
-td.above-average {
-	color: red;
-}
-
-td.regular-average {
-	
+td.regular {
+	color: green;
 }
 
 td form {

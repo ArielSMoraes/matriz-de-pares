@@ -1,7 +1,7 @@
 class MatrixController < ApplicationController
 
 	def index
-		@matrix = Matrix.new
+		@matrix = Matrix.first
 	end
 
 	def add_pair
