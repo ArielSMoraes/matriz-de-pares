@@ -4,6 +4,16 @@ class MatrixController < ApplicationController
 		@matrix = Matrix.first
 	end
 
+	def edit
+		@matrix = Matrix.first
+	end
+
+	def update
+		@matrix = Matrix.first
+		@matrix.update(article_params)
+		render "index"
+	end
+
 	def add_pair
 		matrix = Matrix.new()
 		matrix.paired_today(params["person"], params["pair"])
@@ -17,5 +27,10 @@ class MatrixController < ApplicationController
 
 		redirect_to action: :index
 	end
+
+	private
+	  def article_params
+	    params.require(:matrix).permit(:max, :min)
+	  end
 
 end

@@ -10,7 +10,10 @@ class Person < ActiveRecord::Base
 
 	def delete_last_day pair
 		last_day = field_of_days_paired_with(pair).order(date: :desc).first
-		last_day.destroy
+		if last_day
+			last_day.destroy
+		end
+		
 	end
 
 	def field_of_days_paired_with pair

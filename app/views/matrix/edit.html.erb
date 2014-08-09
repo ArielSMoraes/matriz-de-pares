@@ -1,0 +1,15 @@
+<%= form_for :matrix, url: {action: 'update'}, method: :patch do |f| %>
+  <p>
+    <%= f.label :Maximo %><br>
+    <%= f.number_field :max %>
+  </p>
+ 
+  <p>
+    <%= f.label :Minimo %><br>
+    <%= f.number_field :min %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

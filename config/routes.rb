@@ -15,7 +15,12 @@ MatrizDeParesPg::Application.routes.draw do
   root    'matrix#index'
   
   get     'matriz'              => 'matrix#index'
+  get     'matriz/editar'       => 'matrix#edit'
   post    'matriz/add_pair'     => 'matrix#add_pair'
+  
+  patch   'matriz'          => 'matrix#update'
+  put     'matriz'          => 'matrix#update'
+  
   delete  'matriz/remove_pair'  => 'matrix#remove_pair'
 
   # The priority is based upon order of creation: first created -> highest priority.
