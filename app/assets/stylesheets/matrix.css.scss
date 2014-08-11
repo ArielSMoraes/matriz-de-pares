@@ -44,7 +44,11 @@ td.above {
 }
 
 td.regular {
-	color: green;
+	color: gray;
+}
+
+td.today {
+	background-color: #CFC;
 }
 
 td form {

@@ -27,6 +27,12 @@ class Matrix < ActiveRecord::Base
 		average
 	end
 
+	def paired_today? person, pair
+		if person.paired_today_with?(pair)
+			"today"
+		end
+	end
+
 	def reversed_persons_matrix
 		@reversed_persons_matrix = Person.all.order(name: :desc)
 		@reversed_persons_matrix.pop
